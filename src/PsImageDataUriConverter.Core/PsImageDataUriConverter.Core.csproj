@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<nullable>disable</nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="RegExtract" Version="1.0.18" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="2.1.1" />
+	</ItemGroup>
+
+</Project>

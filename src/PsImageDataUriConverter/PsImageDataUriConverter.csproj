@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<nullable>disable</nullable>
+		<AssemblyName>ImageDataUriConverter</AssemblyName>
+		<RootNamespace>ImageDataUriConverter</RootNamespace>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PowerShellStandard.Library" Version="7.0.0-preview.1" />
+		<PackageReference Include="TextCopy" Version="6.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\PsImageDataUriConverter.Core\PsImageDataUriConverter.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="ImageDataUriConverter.dll-Help.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="ImageDataUriConverter.psd1">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
