@@ -1,4 +1,4 @@
-# PsImageDataUriConverter
+# ImageDataUriConverter
 
 [![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/ImageDataUriConverter?label=ImageDataUriConverter&logo=powershell&style=plastic)](https://www.powershellgallery.com/packages/ImageDataUriConverter)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/ImageDataUriConverter?style=plastic)](https://www.powershellgallery.com/packages/ImageDataUriConverter)
