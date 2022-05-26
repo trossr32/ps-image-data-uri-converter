@@ -21,19 +21,6 @@ public static class ImageTypeHelpers
         {".tif", "tiff"},
     };
 
-    //public static readonly Dictionary<string, string> DataUriImageTypeMappings = new()
-    //{
-    //    {"jpeg", ".jpg"},
-    //    {"png", ".png"},
-    //    {"svg+xml", ".svg"},
-    //    {"webp", ".webp"},
-    //    {"gif", ".gif"},
-    //    {"avif", ".avif"},
-    //    {"apng", ".apng"},
-    //    {"x-icon", ".ico"},
-    //    {"tiff", ".tif"}
-    //};
-
     public static string AsImageTypeExtension(this string dataUriFormatType) =>
         SupportedImageFormats.First(kvp => kvp.Value == dataUriFormatType).Key;
 

@@ -49,7 +49,7 @@ public class InvokeDataUriToImageCmdlet : PSCmdlet
     {
         base.BeginProcessing();
 
-        // ensure image path is correct
+        // ensure data uri is in the correct format
         if (!DataUri.IsDataUri())
             ThrowTerminatingError(new ErrorRecord(new Exception($"Invalid data uri supplied: {DataUri}"), null, ErrorCategory.InvalidArgument, null));
     }

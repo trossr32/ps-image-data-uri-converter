@@ -1,5 +1,7 @@
 ﻿using PsImageDataUriConverter.Core.Helpers;
 using RegExtract;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace PsImageDataUriConverter.Core.Converters;
 
@@ -26,6 +28,32 @@ public static class DataUriConverter
         fs.Write(bytes);
 
         return image;
+    }
+
+    /// <summary>
+    /// Converts a data uri to an image, resizes, then converts back to a data uri
+    /// </summary>
+    /// <param name="dataUri"></param>
+    /// <param name="width"></param>
+    /// <param name="height"></param>
+    /// <returns></returns>
+    public static string Resize(this string dataUri, int? width, int? height)
+    {
+        Image.Identify(dataUri.AsByteArray(), out var format);
+
+        var image = Image.Load(dataUri.AsByteArray());
+
+        var w = width ?? image.Width;
+        var h = height ?? image.Height;
+
+        image.Mutate(i => i.Resize(new ResizeOptions
+        {
+            Mode = ResizeMode.Max,
+            Position = AnchorPositionMode.Center,
+            Size = new Size(w, h)
+        }));
+        
+        return image.ToBase64String(format);
     }
 
     /// <summary>

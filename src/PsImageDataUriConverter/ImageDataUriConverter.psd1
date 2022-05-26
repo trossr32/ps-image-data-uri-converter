@@ -12,7 +12,7 @@
     RootModule           = 'ImageDataUriConverter.dll'
 
     # Version number of this module.
-    ModuleVersion        = '1.0.0'
+    ModuleVersion        = '1.1.0'
 
     # Supported PSEditions
     CompatiblePSEditions = 'Core'
@@ -30,7 +30,7 @@
     Copyright            = '(c) 2022 Rob Green. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description          = 'A Powershell module that generates a data uri from an image file or converts a data uri to an image file.'
+    Description          = 'A Powershell module that generates a data uri from an image file, converts a data uri to an image file or resizes a data uri.'
 
     # Minimum version of the Windows PowerShell engine required by this module
     PowerShellVersion    = '7.0'
@@ -74,7 +74,8 @@
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
     CmdletsToExport      = @(
                             'Invoke-ImageToDataUri', 
-                            'Invoke-DataUriToImage'
+                            'Invoke-DataUriToImage', 
+                            'Invoke-DataUriResize'
                             )
 
     # Variables to export from this module
@@ -98,7 +99,7 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags       = 'Data URI', 'Image Converter', 'Data URI Converter'
+            Tags       = 'data-uri', 'image-converter', 'data-uri-converter'
 
             # A URL to the license for this module.
             LicenseUri = 'https://github.com/trossr32/ps-image-data-uri-converter/blob/master/LICENSE'

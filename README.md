@@ -3,12 +3,12 @@
 [![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/ImageDataUriConverter?label=ImageDataUriConverter&logo=powershell&style=plastic)](https://www.powershellgallery.com/packages/ImageDataUriConverter)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/ImageDataUriConverter?style=plastic)](https://www.powershellgallery.com/packages/ImageDataUriConverter)
 
-A Powershell module for data URI to/from image file conversion.
+A Powershell module for data URI to/from image file conversion, and data URI resizing.
 
 Available in the [Powershell Gallery](https://www.powershellgallery.com/packages/ImageDataUriConverter)
 
 ## Description
-Convert an image file to a base64 data URI, or create an image file from a base64 data URI.
+Convert an image file to a base64 data URI, create an image file from a base64 data URI, or resize a data URI as a new data URI.
 
 Optionally resize the image prior to data URI conversion (original file retained, resizing is done in memory).
 
@@ -24,6 +24,7 @@ Import-Module ImageDataUriConverter
 ```powershell
 Invoke-ImageToDataUri
 Invoke-DataUriToImage
+Invoke-DataUriResize
 ```
 
 ## Examples
@@ -56,6 +57,12 @@ Invoke-DataUriToImage -DataUri 'data:image/png;base64,iVBORw0K...'
 
 ```powershell
 Invoke-DataUriToImage -DataUri 'data:image/png;base64,iVBORw0K...' -OutFile 'C:\Temp\an.image.png'
+```
+
+### Resize a data uri to 30px x 30px and copy to clipboard
+
+```powershell
+Invoke-DataUriResize -DataUri 'data:image/png;base64,iVBORw0K...' -Width 30 -Height 30 -CopyToClipboard
 ```
 
 ## Building the module and importing locally
